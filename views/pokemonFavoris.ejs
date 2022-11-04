@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title%></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <div id="menu" class="menu">
+        <ul>
+            <li><a href="/pokemon">Accueil</a></li>
+            <li><a href="/pokemon/pokemonFavoris">Mes listes de Pokémons favoris</a></li>
+        </ul>
+    </div>
+</br>
+</br>
+</br>
+    <ul>
+        <%pokemon.forEach(pokemon => { %>
+            <ul>
+                <li>Nom :<%=pokemon.name%></li>
+                <li>ID :<%=pokemon.id%></li>
+                <li>Hauteur: <%=pokemon.height%></li>
+                <li>Poids: <%=pokemon.weight%></li>
+                <li>Base Eperience: <%=pokemon.base_experience%></li>
+
+                <% if(pokemon.commentaire !== null) { %>
+                    <li>Commentaire : <%= pokemon.commentaire%></li>
+                <%}%>
+
+                <% if(pokemon.possede !== null) { %>
+                    <li>Possede : <%= pokemon.possede === true ? 'Oui' : 'Non'%></li>
+                <%}%>
+                
+                <button><a href="/pokemon/supprimePokemon/<%=pokemon.id%>">Supprimer</a></button>
+            </ul>
+            <br>
+        <% }); %>
+    </ul>
+</body>
+</html>

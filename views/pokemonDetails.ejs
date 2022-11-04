@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Pokémon  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div id="menu" class="menu">
+  <ul>
+      <li><a href="/pokemon">Accueil</a></li>
+      <li><a href="/pokemon/pokemonFavoris">Mes listes de Pokémons favoris</a></li>
+  </ul>
+  </div>
+
+  </br>
+  </br>
+  </br>
+  
+  <h1><%= pokemon.name %></h1>
+   
+  <ul>
+    <div><li> Nom : <%=pokemon.name %> </li></div>
+    <div><li> Taille : <%=pokemon.height %></li></div>
+    <div><li>Poids :<%=pokemon.weight%></li></div>
+    <div><li>Base experience :<%=pokemon.base_experience%></li></div>
+  </ul>
+  </br>
+  <form action="/pokemon/<%=title%>" method="POST">
+    <button>Ajouter au liste des favoris</button>
+  </form>  
+</body>
+
+</html>

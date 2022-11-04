@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Accueil</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div id="menu" class="menu">
+      <ul>
+          <li><a href="/pokemon">Accueil</a></li>
+          <li><a href="/pokemon/pokemonFavoris">Mes listes de Pokémons favoris</a></li>
+      </ul>
+    </div>
+
+  </br>
+  </br>
+  </br>
+
+
+    <h1> Listes des Pokémons :</h1>
+    <div>
+    <ul>
+      <%pokemon.forEach(function(pokemon) { %>
+        <li><a href="/pokemon/pokemonDetails/<%=pokemon.id%>"><%=pokemon.name%></a></li>
+      <% }); %>
+    </ul>
+    </div>
+
+
+    
+  </body>
+</html>

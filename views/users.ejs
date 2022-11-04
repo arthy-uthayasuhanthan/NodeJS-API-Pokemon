@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Infos users</title>
+  </head>
+  <body>
+    <h1>Liste des utilisateurs</h1>
+  <div>
+    <ul>
+        <% users.forEach(function(user){ %>
+        <li>Nom : <%= user.name %>, Age: <%= user.age %>, Ville: <%= user.city %> </li>
+            <% }); %>
+    </ul>
+  </div>
+  </body>
+</html>
+
