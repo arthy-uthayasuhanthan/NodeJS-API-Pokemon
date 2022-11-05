@@ -19,5 +19,4 @@ router.post('/', usersController.create);
 router.delete('/user', usersController.deleteUser);
 router.put('/user', usersController.editUser);
 
-
 module.exports = router;
